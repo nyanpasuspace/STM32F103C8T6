@@ -1,5 +1,3 @@
-#ifndef __LED_H
-#define __LED_H	 
 #include "stm32f10x.h"
 
 // PC13
@@ -11,5 +9,4 @@
 void LED_Init(void);
 void LED_ON(void);
 void LED_OFF(void);
-
-#endif
+void LED_Toggler(void);

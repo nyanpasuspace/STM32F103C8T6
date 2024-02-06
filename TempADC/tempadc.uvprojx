@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>Sample</TargetName>
+      <TargetName>TEMPADC</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060750::V5.06 update 6 (build 750)::.\ARMCC</pCCUsed>
@@ -538,9 +538,53 @@
         </Group>
         <Group>
           <GroupName>SYSTEM</GroupName>
+          <Files>
+            <File>
+              <FileName>tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\SYSTEM\tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>tim.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\SYSTEM\tim.h</FilePath>
+            </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\SYSTEM\usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\SYSTEM\usart.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>HARDWARE</GroupName>
+          <Files>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HARDWARE\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HARDWARE\led.h</FilePath>
+            </File>
+            <File>
+              <FileName>temp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HARDWARE\temp.c</FilePath>
+            </File>
+            <File>
+              <FileName>temp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HARDWARE\temp.h</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>

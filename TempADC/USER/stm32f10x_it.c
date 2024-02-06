@@ -23,6 +23,9 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
+#include "usart.h"
+#include "led.h"
+#include "temp.h"
 
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
@@ -158,3 +161,14 @@ void SysTick_Handler(void)
 
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
+void TIM2_IRQHandler(void) {
+	if(TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET) {
+		float voltage = ConvertToVolt();
+		char* temp = ConvertData(voltage);
+		USART_SendString(USART1, temp);
+		free(temp);
+		LED_Toggler();
+	}
+	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+}
+
